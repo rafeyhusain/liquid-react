@@ -7,14 +7,14 @@ export default function FilmItem({ film }) {
     const setState = useSessionUpdate()
     const navigate = useNavigate();
 
-    const handlePeopleClick = (f) => {
-        setState({ films: [], people: f.characters, ships: f.starships })
-        navigate("/people");
+    const handlePeopleClick = (x) => {
+        setState({ films: [], people: x.characters, ships: x.starships })
+        navigate("/people-viewer");
     }
 
-    const HandleShipClick = (f) => {
-        setState({ films: [], people: f.characters, ships: f.starships })
-        navigate("/ship");
+    const handleShipClick = (x) => {
+        setState({ films: [], people: x.characters, ships: x.starships })
+        navigate("/ships-viewer");
     }
 
     return (
@@ -27,10 +27,10 @@ export default function FilmItem({ film }) {
                 <Card.Body>
                     <Card.Title>{film.title}</Card.Title>
                     <Card.Text>
-                        {film.opening_crawl.substring(0, 200)}...
+                        {film.opening_crawl}...
                     </Card.Text>
                     <Card.Link href="#" onClick={() => handlePeopleClick(film)}>People</Card.Link>
-                    <Card.Link href="#" onClick={() => HandleShipClick(film)}>Starships</Card.Link>
+                    <Card.Link href="#" onClick={() => handleShipClick(film)}>Ships</Card.Link>
                 </Card.Body>
                 <Card.Footer>
                     <small className="text-muted">Release date {film.release_date}</small>

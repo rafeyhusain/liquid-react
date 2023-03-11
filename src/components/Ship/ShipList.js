@@ -1,11 +1,11 @@
 import React from 'react'
-import StarshipItem from './StarshipItem'
+import ShipItem from './ShipItem'
 
 export default function StarshipList({ ships }) {
     return (
         <>
             {ships.map(ship => (
-                <StarshipItem key={ship.url} ship={ship}></StarshipItem>
+                <ShipItem key={ship.url} ship={ship}></ShipItem>
             ))}
         </>
     )

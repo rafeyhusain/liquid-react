@@ -11,7 +11,7 @@ export default function People() {
 
   useEffect(() => {
     setLoading(true)
-    getPeople(true)
+    getPeople()
       .then(response => {
         setPoeple(response.data.results)
         setLoading(false)

@@ -6,7 +6,11 @@ import {
 } from "react-router-dom";
 import People from '../../pages/People'
 import Films from '../../pages/Films'
-import Starships from '../../pages/Starships'
+import Ships from '../../pages/Ships'
+import PeopleViewer from '../../pages/PeopleViewer'
+import FilmsViewer from '../../pages/FilmsViewer'
+import ShipsViewer from '../../pages/ShipsViewer'
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -20,7 +24,7 @@ export default function Header() {
                     <Nav className="me-auto">
                         <Nav.Item className="m-2"><Link to="/people">People</Link></Nav.Item>
                         <Nav.Item className="m-2"><Link to="/films">Films</Link></Nav.Item>
-                        <Nav.Item className="m-2"><Link to="/starships">Starships</Link></Nav.Item>
+                        <Nav.Item className="m-2"><Link to="/ships">Ships</Link></Nav.Item>
                     </Nav>
                 </Container >
             </Navbar >
@@ -28,7 +32,10 @@ export default function Header() {
             <Routes>
                 <Route path="/people" element={<People />} />
                 <Route path="/films" element={<Films />} />
-                <Route path="/starships" element={<Starships />} />
+                <Route path="/ships" element={<Ships />} />
+                <Route path="/people-viewer" element={<PeopleViewer />} />
+                <Route path="/films-viewer" element={<FilmsViewer />} />
+                <Route path="/ships-viewer" element={<ShipsViewer />} />
             </Routes>
         </>
     );

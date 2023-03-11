@@ -6,3 +6,9 @@ export const getFilms = (live) => {
 
     return axios.get(url)
 }
+
+export const getFilm = (url, live) => {
+    url = live ? url : 'http://localhost:3000/data/film.json'
+
+    return axios.get(url)
+}

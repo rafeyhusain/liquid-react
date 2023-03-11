@@ -11,7 +11,7 @@ export default function Films() {
 
     useEffect(() => {
         setLoading(true)
-        getFilms(true)
+        getFilms()
             .then(response => {
                 setFilms(response.data.results)
                 setLoading(false)

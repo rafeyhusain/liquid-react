@@ -6,3 +6,9 @@ export const getPeople = (live) => {
 
     return axios.get(url)
 }
+
+export const getPerson = (url, live) => {
+    url = live ? url : 'http://localhost:3000/data/person.json'
+
+    return axios.get(url)
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import StarshipList from '../components/Starship/StarshipList'
-import { getShips } from '../services/StarshipService'
+import StarshipList from '../components/Ship/ShipList'
+import { getShips } from '../services/ShipService'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Spinner from '../components/Spinner/Spinner';
@@ -11,7 +11,7 @@ export default function Films() {
 
     useEffect(() => {
         setLoading(true)
-        getShips(true)
+        getShips()
             .then(response => {
                 setShips(response.data.results)
                 setLoading(false)
