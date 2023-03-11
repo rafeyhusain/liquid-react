@@ -1,7 +1,12 @@
 import React from 'react'
+import StarshipItem from './StarshipItem'
 
-export default function StarshipList() {
+export default function StarshipList({ ships }) {
     return (
-        <div>StarshipList</div>
+        <>
+            {ships.map(ship => (
+                <StarshipItem key={ship.url} ship={ship}></StarshipItem>
+            ))}
+        </>
     )
 }

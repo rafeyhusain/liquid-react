@@ -1,24 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { getFilms } from '../../services/FilmService'
+import React from 'react'
 import FilmItem from './FilmItem'
 
-export default function FilmList() {
-    const [films, setFilms] = useState([])
-
-    useEffect(() => {
-        getFilms()
-            .then(response => {
-                setFilms(response.data.results)
-            }).catch(error => {
-                console.error(`Error: ${error}`)
-            })
-    }, [])
+export default function FilmList({ films }) {
     return (
         <>
-            <h1>Films</h1>
             {films.map(film => (
-                <FilmItem film={film}></FilmItem>
+                <FilmItem key={film.url} film={film}></FilmItem>
             ))}
         </>
     )
 }
+

@@ -1,7 +1,12 @@
 import React from 'react'
+import PeopleItem from './PeopleItem'
 
-export default function PeopleList() {
+export default function PeopleList({ people }) {
     return (
-        <div>PeopleList</div>
+        <>
+            {people.map(person => (
+                <PeopleItem key={person.url} person={person}></PeopleItem>
+            ))}
+        </>
     )
 }

@@ -4,7 +4,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import Peoples from '../../pages/Peoples'
+import People from '../../pages/People'
 import Films from '../../pages/Films'
 import Starships from '../../pages/Starships'
 import Container from 'react-bootstrap/Container';
@@ -18,15 +18,15 @@ export default function Header() {
                 <Container>
                     <Navbar.Brand href="/">Starwars</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="#"><Link to="/peoples">Peoples</Link></Nav.Link>
-                        <Nav.Link href="#"><Link to="/films">Films</Link></Nav.Link>
-                        <Nav.Link href="#"><Link to="/starships">Starships</Link></Nav.Link>
+                        <Nav.Item className="m-2"><Link to="/people">People</Link></Nav.Item>
+                        <Nav.Item className="m-2"><Link to="/films">Films</Link></Nav.Item>
+                        <Nav.Item className="m-2"><Link to="/starships">Starships</Link></Nav.Item>
                     </Nav>
-                </Container>
-            </Navbar>
+                </Container >
+            </Navbar >
 
             <Routes>
-                <Route path="/peoples" element={<Peoples />} />
+                <Route path="/people" element={<People />} />
                 <Route path="/films" element={<Films />} />
                 <Route path="/starships" element={<Starships />} />
             </Routes>
