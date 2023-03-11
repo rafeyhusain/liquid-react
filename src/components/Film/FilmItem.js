@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function FilmItem() {
+export default function FilmItem({ film }) {
     return (
-        <div>FilmItem</div>
+        <div>{film.title}</div>
     )
 }
