@@ -20,6 +20,5 @@ export default function FilmList() {
                 <FilmItem film={film}></FilmItem>
             ))}
         </>
-
     )
 }
